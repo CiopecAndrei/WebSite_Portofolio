@@ -1,0 +1,362 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a base font size and family */
+body {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: radial-gradient(circle, #6F2232, #1A1A1D);
+}
+
+/* Add some basic styling to the page */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: none;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
+    color: #C3073F;
+}
+
+footer {
+    text-align: center;
+    margin-top: auto;
+    background-color: #1A1A1D; /* Example background color */
+    color: white; /* Example text color */
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    border-top: 5px solid #6F2232;
+}
+
+
+h2{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 60%;
+    font-style: italic;
+    color: #950740;
+}
+
+header{
+    background-color: #1A1A1D;
+    color: white;
+    padding-bottom: 10px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+    text-shadow: 2px 2px 4px #000000;
+    border-bottom: 5px solid #6F2232;
+}
+i{
+    padding-top: 0%;
+    font-size: 20px;
+    margin-right: 25px;
+}
+
+.footerp{
+    text-align: center;
+    margin-top: auto;
+    background-color: #1A1A1D; /* Example background color */
+    color: white; /* Example text color */
+    padding-bottom: none;
+    padding-top: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.column1 {
+    flex: 1;
+    width: 33.33%;
+    height: 100vh;
+    margin: 10px;
+    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A1A1D;
+    transition: all 0.5s ease;
+    color: white; /* Light text for readability */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23); /* Shadow for depth */
+    border: 0.5px solid grey;
+    border-radius: 15px;
+}
+
+.column1:hover {
+    transform: scale(1.02); /* Slightly enlarge the column when hovered over */
+    border: 3px solid #6F2232; /* Example border color */
+    border-radius: 20px;
+    h2{
+        color: white;
+        transition-behavior: smooth;
+    }
+}
+
+.column1:hover .unreveal {
+    opacity: 0;
+}
+
+.column1:hover .reveal {
+    opacity: 1; /* Make the reveal content fully visible when parent column is hovered */
+    transition-delay: 0.2s;
+}
+
+.column2 {
+    flex: 1;
+    width: 33.33%;
+    height: 100vh;
+    margin: 15px;
+    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A1A1D;
+    transition: all 0.5s ease;
+    color: white; /* Light text for readability */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23); /* Shadow for depth */
+    border: 0.5px solid grey;
+    border-radius: 15px;
+}
+
+.column2:hover {
+    transform: scale(1.03); /* Slightly enlarge the column when hovered over */
+    border: 3px solid #6F2232; /* Example border color */
+    border-radius: 20px;
+    h2{
+        color: white;
+        transition-behavior: smooth;
+    }
+}
+
+.column2:hover .unreveal {
+    opacity: 0;
+}
+
+.column2:hover .reveal {
+    opacity: 1; /* Make the reveal content fully visible when parent column is hovered */
+    transition-delay: 0.2s;
+}
+
+.column3 {
+    flex: 1;
+    width: 33.33%;
+    margin: 10px;
+    height: 100vh;
+    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A1A1D;
+    transition: all 0.5s ease;
+    color: white; /* Light text for readability */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23); /* Shadow for depth */
+    border: 0.5px solid #ccc;
+    border-radius: 15px;
+}
+
+.column3:hover {
+    transform: scale(1.02); /* Slightly enlarge the column when hovered over */
+    border: 3px solid #6F2232; /* Example border color */
+    border-radius: 20px;
+    h2{
+        color: white;
+        transition-behavior: smooth;
+    }
+}
+.column3:hover .unreveal {
+    opacity: 0;
+}
+
+.column3:hover .reveal {
+    opacity: 1; /* Make the reveal content fully visible when parent column is hovered */
+    transition-delay: 0.2s;
+}
+
+.reveal {
+    opacity: 0; /* Initially hide the reveal content */
+    transition: opacity 0.5s ease; /* Add transition for smooth reveal */
+    font-size: 15px;
+    
+}
+
+.unreveal {
+    opacity: 1; /* Initially hide the reveal content */
+    transition: opacity 0.5s ease; /* Add transition for smooth reveal */
+}
+
+.logo{
+    width: 300px;
+    height: 300;
+    padding-top: 60px;
+}
+
+.sociallink{
+    font-size: 20px;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+    display:inline-block;
+}
+
+/* CSS class to reduce header height when scrolled */
+header {
+    /* existing styles */
+    height: 100vh; /* Set the initial height to the viewport height */
+    transition: height 0.5s ease; /* Smooth transition for the height change */
+}
+
+header.scrolled {
+    height: 70px;
+}
+
+/* CSS class to gradually reveal body content */
+body > *:not(header) {
+    opacity: 0; /* Initially hide the body content */
+    transition: opacity 0.5s ease; /* Add transition for smooth reveal */
+}
+
+body > *:not(header).show {
+    opacity: 1; /* Show the body content */
+}
+
+.logo {
+    width: 250px;
+    height: 200px;
+    transition: opacity 0.3s ease; /* Add transition for smooth opacity change */
+}
+
+.hidden {
+    opacity: 0; /* Apply hidden class to initiate fade-out */
+}
+
+header > *:not(.logo) {
+    transition: opacity 0.3s ease; /* Add transition for smooth opacity change to all header elements except the logo */
+}
+
+.hidden {
+    opacity: 0; /* Apply hidden class to initiate fade-out */
+}
+
+.headerh1{
+    padding-top: 60px;
+    font-size: 70px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #C3073F;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1A1A1D;
+    border-bottom: 5px solid #6F2232;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1A1A1D;
+    border-bottom: 5px solid #6F2232;
+}
+
+.profile-image {
+    width: 400px; /* Adjust width as needed */
+    height: 500px; /* Adjust height as needed */
+    border-radius: 20%; /* Round image corners */
+    margin-right: 20px; /* Add space between image and text */
+    margin-left: 20px;
+    float: right;
+  }
+
+  p.about-me-text{
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: justify;
+    align-items: center;
+    color: #C3073F;
+    padding-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul.about-me{
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    align-items: center;
+    color: #C3073F;
+    padding-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    list-style-type: none;
+}
+
+li {
+    /* Add padding-left and a marker before the text */
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 5px;
+  }
+  
+  li:before {
+    content: "•"; /* Use a content character as a marker */
+    position: absolute;
+    left: 0;
+    color: #C3073F; /* Match list text color */
+  }
+  
+  
+  div.cta{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  i{
+    padding-top: 0%;
+    font-size: 20px;
+    margin-right: 25px;
+    text-align: center;
+  }
+
+  [class^="fa-"], [class*=" fa-"] {
+     display: inline-block;
+    width: 100%;
+  }
+
+  a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
